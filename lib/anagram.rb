@@ -30,7 +30,7 @@ class Word
     if @count1 > 0 && @count2 > 0
       if (@input == @hello) && (@input.length > 0 && @hello.length > 0)
         @result = 'Woaaah these are anagrams!'
-      elsif @input.include?(@hello) == false
+      elsif @input.to_s.include?(@hello.to_s) == false
         @result = 'These are what we call antigrams'
       elsif @input != @hello
         @result = 'Big disappoint, these are not anagrams'
