@@ -32,4 +32,9 @@ describe('Word#anagram') do
       x = Word.new('whx', 'lst')
       expect(x.anagram).to(eq(true))
     end
+
+    it('will check if arguments arent real words') do
+      x = Word.new('whx', 'whx')
+      expect(x.anagram).to(eq(false))
+    end
 end
