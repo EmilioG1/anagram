@@ -40,6 +40,6 @@ describe('Word#anagram') do
 
     it('will check if arguments are real words but not anagrams') do
       x = Word.new('hello', 'bonjour')
-      expect(x.anagram).to(eq('Nice try, but are both real words?'))
+      expect(x.anagram).to(eq('Big disappoint, these are not anagrams'))
     end
 end
