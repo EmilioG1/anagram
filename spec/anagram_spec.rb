@@ -8,7 +8,7 @@ describe('Word#anagram') do
     expect(x.anagram).to(eq(true))
   end
 
-  it('will compare lowercase uppercased letters and return true') do
+  it('will compare uppercased letters and return true') do
     x = Word.new('A', 'A')
     expect(x.anagram).to(eq(true))
   end
@@ -22,9 +22,14 @@ describe('Word#anagram') do
     x = Word.new('t', 't')
     expect(x.anagram).to(eq(true))
   end
-
-  it('will check if more than one letter is passed into arguments') do
-    x = Word.new('hello', 'olleh')
-    expect(x.anagram).to(eq(true))
-  end
+  
+    it('will check if more than one letter is passed into arguments') do
+      x = Word.new('hello', 'olleh')
+      expect(x.anagram).to(eq(true))
+    end
+  
+    it('will check if words dont match up') do
+      x = Word.new('whx', 'lst')
+      expect(x.anagram).to(eq(true))
+    end
 end

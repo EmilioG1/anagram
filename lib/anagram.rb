@@ -16,9 +16,17 @@ class Word
         if @vowels.count > 0
           @hello.select {|y| y == @vowels}
             if @vowels.count > 0
+              @result = 'this is an anagram!'
               true
+            else
+              @result = 'this is not a real word'
             end
+        else
+          @result = 'this is not a real word'
         end
+    elsif (@input != @hello)
+      @result = 'this is not an anagram'
+      
     else
       false
     end
@@ -32,17 +40,3 @@ end
     # check to make sure inputted words have vowels, return a message if there are no vowels ('not an actual word!')
     # check if they are 'antigrams' -- none of the letters match -- and return a message
     # check for sentences as well -- MUST REMOVE spaces and puncuation ... maybe a regex for punctuation?...
-    
-    
-    # if @input == @hello
-    #   if ((@input.count @vowels) > 0) && ((@hello.count @vowels) > 0)
-    #     input_array = @input.chars.sort
-    #     hello_array = @hello.chars.sort
-    #     vowel_array = @vowels.chars.sort
-    #     true
-    #   else
-    #     false
-    #   end
-    # else
-    #   false
-    # end
