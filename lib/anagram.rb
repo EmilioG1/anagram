@@ -10,9 +10,8 @@ class Word
 
 
   def anagram
-    # @input.split('')
-    # @output.split('')
-    if (@input.length == @hello.length)
+    if (@input.length == @hello.length) && (@vowels.index(@input)) && (@vowels.index(@hello))
+      if (@input.length > 1) && (@hello.length > 1)
       true
     else
       false
@@ -20,7 +19,7 @@ class Word
   end
 end
 
-# check if two words have exact same lettters but in different order
+# check if two words have exact same letters but in different order
 # make sure to downcase()
 # check to make sure inputted words have vowels, return a message if there are no vowels ('not an actual word!')
 # check if they are 'antigrams' -- none of the letters match -- and return a message
