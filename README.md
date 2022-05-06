@@ -21,7 +21,7 @@ _A comparison program that takes two inputs and checks to see if they are anagra
 
 
 ## Known Bugs
-* _No known bugs_
+* _Some issues with branching logic when words are not anagrams_
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
