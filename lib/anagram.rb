@@ -30,15 +30,15 @@ class Word
       end
       if @count1 > 0
         if @count2 > 0
-          @result = 'these are anagrams!'
+          @result = 'Woaaah these are anagrams!'
         else
-          @result = 'these are not real words'
+          @result = 'Nice try, but are both real words?'
         end
       else
-        @result = 'these are not real words'
+        @result = 'Nice try, but are both real words?'
       end
     elsif (@input != @hello)
-      @result = 'these are not anagrams'
+      @result = 'Big disappoint, these are not anagrams'
     else
       false
     end
