@@ -11,7 +11,7 @@ class Word
 
   def anagram
     if (@input.length == @hello.length) && (@vowels.index(@input)) && (@vowels.index(@hello))
-      if (@input.length > 1) && (@hello.length > 1)
+      # if (@input.length > 1) && (@hello.length > 1)
       true
     else
       false

@@ -21,5 +21,15 @@ describe('Word#anagram') do
     expect(x).to(eq(true))
   end
 
+  it('will return false if letters are not vowels') do
+    x = Word.new('t', 'w').anagram
+    puts x
+    expect(x).to(eq(false))
+  end
 
+  it('will check if more than one letter is passed into arguments') do
+    x = Word.new('t', 'w').anagram
+    puts x
+    expect(x).to(eq(true))
+  end
 end
