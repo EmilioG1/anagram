@@ -26,7 +26,7 @@ class Word
         end
     elsif (@input != @hello)
       @result = 'this is not an anagram'
-      
+      true
     else
       false
     end
