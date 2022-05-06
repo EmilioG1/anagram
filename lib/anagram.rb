@@ -1,4 +1,6 @@
 class Word
+  
+  attr_accessor(:input, :hello)
 
   def initialize(input, hello)
     @input = input.downcase
@@ -7,7 +9,11 @@ class Word
 
 
   def anagram
-    
+    if (@input.length == @hello.length)
+      true
+    else
+      false
+    end
   end
 end
 
