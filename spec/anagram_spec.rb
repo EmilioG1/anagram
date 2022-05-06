@@ -9,7 +9,13 @@ describe('Word#anagram') do
     expect(x).to(eq(true))
   end
 
-  it('will lowercase uppercased letters and return true') do
+  it('will compare lowercase uppercased letters and return true') do
+    x = Word.new('B', 'N').anagram
+    puts x
+    expect(x).to(eq(true))
+  end
+
+  it('will check if letters are vowels') do
     x = Word.new('B', 'N').anagram
     puts x
     expect(x).to(eq(true))

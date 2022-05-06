@@ -5,10 +5,13 @@ class Word
   def initialize(input, hello)
     @input = input.downcase
     @hello = hello.downcase
+    @vowels = ['a', 'e', 'i', 'o', 'u']
   end
 
 
   def anagram
+    # @input.split('')
+    # @output.split('')
     if (@input.length == @hello.length)
       true
     else
