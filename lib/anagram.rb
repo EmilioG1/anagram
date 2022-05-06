@@ -7,30 +7,42 @@ class Word
     @hello = hello.downcase.split('').sort
     @vowels = ['a', 'e', 'i', 'o', 'u']
     @result = ''
+    @count1 = 0
+    @count2 = 0
   end
 
 
   def anagram
     if (@input == @hello) && (@input.length > 0 && @hello.length > 0)
-      @input.select {|x| x == @vowels}
-        if @vowels.count > 0
-          @hello.select {|y| y == @vowels}
-            if @vowels.count > 0
-              @result = 'this is an anagram!'
-              true
-            else
-              @result = 'this is not a real word'
-            end
-        else
-          @result = 'this is not a real word'
+      @input.each do |char| 
+        @vowels.each do |vowel|
+          if char == vowel
+            @count1 += 1
+          end
         end
+      end
+      @hello.each do |c|
+        @vowels.each do |v|
+          if c == v
+            @count2 += 1
+          end
+        end
+      end
+      if @count1 > 0
+        if @count2 > 0
+          @result = 'these are anagrams!'
+        else
+          @result = 'these are not real words'
+        end
+      else
+        @result = 'these are not real words'
+      end
     elsif (@input != @hello)
-      @result = 'this is not an anagram'
-      true
+      @result = 'these are not anagrams'
     else
       false
     end
-    # @result
+    @result
   end
 end
     
