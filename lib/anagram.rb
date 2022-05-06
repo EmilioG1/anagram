@@ -5,17 +5,20 @@ class Word
   def initialize(input, hello)
     @input = input.downcase
     @hello = hello.downcase
-    @vowels = ['a', 'e', 'i', 'o', 'u']
+    @vowels = 'aeiou'
     @result = ''
   end
 
 
   def anagram
-    input_new = @input.chars.sort
-    hello_new = @hello.chars.sort
-    if (@input.length == @hello.length) && (@vowels.index(@input)) && (@vowels.index(@hello))
-      # if (@input.length > 1) && (@hello.length > 1)
-      true
+    if @input == @hello
+      if ((@input.count @vowels) > 0) && ((@hello.count @vowels) > 0)
+        input_array = @input.chars.sort
+        hello_array = @hello.chars.sort
+        true
+      else
+        false
+      end
     else
       false
     end
@@ -29,19 +32,3 @@ end
 # check if they are 'antigrams' -- none of the letters match -- and return a message
 # check for sentences as well -- MUST REMOVE spaces and puncuation ... maybe a regex for punctuation?...
 
-# def anagram
-
-#   if (@input.length == @hello.length)
-#     true
-#     if ((@input.length >= 1) && (@hello.length >= 1)) 
-#       true
-#       if (@input.chars.include?(@vowels) && (@hello.chars.include?(@vowels)))
-#         print 'yes'
-#         true
-#       end
-#     end
-#   else
-#     false
-#   end
-#   # @result.join
-# end
