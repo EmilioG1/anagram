@@ -18,10 +18,11 @@ _A comparison program that takes two inputs and checks to see if they are anagra
 * _Navigate to the top level of anagram main branch and open in code editor_
 * _run bundle in terminal_
 * _run ruby scripts.rb in terminal to test inputs_
+* _run rspec in terminal for TDD testing_
 
 
 ## Known Bugs
-* _Some issues with branching logic when words are not anagrams_
+* _No known bugs_
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
