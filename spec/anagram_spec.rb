@@ -44,7 +44,7 @@ describe('Word#anagram') do
     end
 
     it('will check if arguments are antigrams') do
-      x = Word.new('entire', 'bonjour')
+      x = Word.new('hi', 'bye')
       expect(x.anagram).to(eq('These are what we call antigrams'))
     end
 end
